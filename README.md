@@ -242,3 +242,49 @@ Mastering the Linux shell is **non-negotiable** in cybersecurity:
 
 **Conclusion:** This module lays the foundation for navigating, managing, and automating tasks in any Linux environment, a fundamental skill for any technical role in security.
 
+# TryHackMe - Cyber Security 101
+
+## Module Completed: Networking Concepts
+
+**Completion Date:** [2025/09/25]
+**Module Objective:** Understand fundamental networking models, IP addressing, key protocols, and the encapsulation process, which are the basis for understanding how any device communicates on the Internet.
+
+### 📚 What I Learned / Key Concepts
+
+This module explains the “backbone” of digital communications, a non-negotiable skill in cybersecurity.
+
+#### 1. **Reference Models: OSI vs TCP/IP**
+   - **OSI Model (7 layers):** A theoretical model that divides communication into 7 layers (Physical, Link, Network, Transport, Session, Presentation, Application). It is useful for learning and diagnosing problems.
+   - **TCP/IP Model (4 layers):** The practical and real model on which the Internet is based (Link, Internet, Transport, Application).
+   - We learned to **compare and contrast** both models, seeing how their layers relate to each other.
+
+#### 2. **IP Addressing and Subnets**
+   - **IP Addresses:** The unique identifiers of devices on a network (e.g., `192.168.1.1` for IPv4).
+   - **Subnets:** How large networks are divided into smaller parts for better organization and security.
+
+#### 3. **Transport Protocols: TCP vs UDP**
+   - **TCP (Transmission Control Protocol):**
+     - **Connection-oriented.** Establishes a channel before sending data.
+     - **Reliable.** Ensures that packets arrive in order and without errors.
+     - **Slower.** Used for web (HTTP/HTTPS), email (SMTP), file transfer (FTP).
+   - **UDP (User Datagram Protocol):**
+     - **Connectionless.** Sends data without establishing a channel first.
+     - **Unreliable.** Does not guarantee delivery or order.
+- **Faster.** Used for video/audio streaming, VoIP, DNS.
+
+#### 4. **Encapsulation**
+   - The process of **adding information from each layer (headers)** to application data as it travels “down” the protocol stack to be transmitted over the network.
+   - At the destination, the process is reversed (“up”), removing each header until the original data is reached.
+
+#### 5. **Hands-on Demonstration with Telnet**
+   - The **`telnet`** command was used to “talk” directly to services (such as web servers) over TCP on a specific port.
+   - This demonstrated in a tangible way how a connection is established at the application/transport level.
+
+### 🛠️ **Why is this important?**
+- **Fundamentals of Cybersecurity:** To defend, audit, or attack a network, **you must understand how it works.**
+- **Traffic Analysis:** Tools such as Wireshark require this knowledge to analyze packets and detect malicious activity.
+- **Troubleshooting:** It allows you to diagnose connectivity failures logically.
+- **Ethical Hacking:** Understanding ports, protocols, and services is the first step in finding entry points.
+
+> **Note:** This module lays the essential technical foundation for all subsequent rooms related to networking, pentesting, and forensics.
+
