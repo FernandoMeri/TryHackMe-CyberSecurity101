@@ -334,3 +334,61 @@ These protocols are the “invisible magic” that makes networks work. A system
 -   **Diagnose problems** with connectivity effectively.
 -   **Understand and exploit** common vulnerabilities such as ARP Spoofing.
 -   **Secure the configuration** of routers and firewalls.
+
+  # TryHackMe - Cyber Security 101
+
+## Module Completed: Networking Core Protocols
+
+**Completion Date:** [2025/09/25]
+**Module Goal:** Understand the practical workings of essential application layer protocols, beyond the graphical interface, using command-line tools such as `telnet` and `netcat`.
+
+### 📚 What I Learned / Protocols Explored
+
+This module focused on direct interaction with the protocols used by everyday applications (browsers, email clients, etc.).
+
+#### 1. **HTTP / HTTPS**
+- **Function:** Transfer of web pages and application data.
+- **Hands-on Experience:** Manually sending `GET` requests using `telnet`/`netcat` to retrieve a web page directly from the server.
+
+#### 2. **FTP (File Transfer Protocol)**
+- **Function:** Transferring files between a client and a server.
+- **Practical Experience:** Using the command line client `ftp` to connect to a server, browse its directories, and download files (`get`).
+
+#### 3. **POP3 (Post Office Protocol v3)**
+- **Function:** Allows an email client to download messages from a server.
+- **Practical Experience:** Manually connecting to a POP3 server via `telnet` to authenticate (`USER`, `PASS`), list messages (`LIST`), and retrieve them (`RETR`).
+
+#### 4. **SMTP (Simple Mail Transfer Protocol)**
+- **Function:** Sending emails between servers.
+- **Practical Experience:** (If covered in the module) Use `telnet` to connect to an SMTP server and simulate sending an email using commands such as `HELO`, `MAIL FROM`, `RCPT TO`, and `DATA`.
+
+#### 5. **DNS (Domain Name System)**
+- **Function:** Translating domain names (e.g., google.com) to IP addresses.
+- **Practical Experience:** (If covered) Using commands such as `dig` or `nslookup` to perform DNS queries and resolve names.
+
+#### 6. **IMAP (Internet Message Access Protocol)**
+- **Function:** Manage email directly on the server (more advanced than POP3).
+- **Practical Experience:** (If covered) Similar to POP3, but with commands to manage folders on the server.
+
+### 🛠️ **Quick Reference Table: Protocols and Ports**
+
+This table is an **essential tool** for any networking and security professional.
+
+| Protocol | Transport Protocol | Default Port Number | Main Purpose |
+| :--- | :--- | :--- | :--- |
+| **TELNET** | TCP | 23 | Remote connection (unencrypted). |
+| **DNS** | UDP or TCP | 53 | Domain name resolution. |
+| **HTTP** | TCP | 80 | Serve web pages (unencrypted). |
+| **HTTPS** | TCP | 443 | Serve web pages (SSL/TLS encryption). |
+| **FTP** | TCP | 21 | File transfer (control). |
+| **SMTP** | TCP | 25 | Sending email. |
+| **POP3** | TCP | 110 | Downloading email. |
+| **IMAP** | TCP | 143 | Managing email on the server. |
+
+### 💡 **Key Takeaway**
+The fundamental skill acquired in this module is the ability to **“talk” directly to network services**, without relying on a graphical application. This is vital for:
+-   Accurate **diagnostics and troubleshooting** of connectivity issues.
+-   **Auditing and pentesting**, allowing you to test configurations and find vulnerabilities manually.
+-   **Gaining an in-depth understanding** of how the applications we use every day actually communicate.
+
+> **Main Achievement:** You no longer just understand the theory behind protocols; you know how to interact with them in a practical and effective way.
