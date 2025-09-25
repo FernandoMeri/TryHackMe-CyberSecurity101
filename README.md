@@ -197,3 +197,48 @@ PowerShell is a **Swiss Army knife** for any professional:
 - **Forensic Analysis:** Quickly extract and process large amounts of data from the system.
 
 **Key Takeaway:** It's not about memorizing all the cmdlets, but about **understanding the logic and knowing how to find the solution** using `Get-Help` and `Get-Command`. This foundation will allow you to learn any specific cmdlet when you need it in the future.
+
+# TryHackMe - Cyber Security 101
+
+## Completed Module: Linux Shells
+
+**Completion Date:** [2025/09/23]
+**Module Objective:** Introduce the fundamentals of interacting with the Linux command line (shell), including the types of shells available, basic commands, and the basics of scripting to automate tasks.
+
+### 📚 What I Learned / Skills Explored
+
+This module provides the essential foundation for working efficiently in Linux environments, which are the standard in servers and cybersecurity.
+
+#### 1. **Interaction with Shells**
+   - The **shell** is the command interpreter that allows the user to interact with the operating system through text.
+   - It is the main interface for managing servers and performing ethical hacking and forensic tasks.
+
+#### 2. **Types of Linux Shells**
+   - **Bash (Bourne-Again SHell):** The most common and standard shell in most Linux distributions. It is the one you learn first.
+   - **Zsh (Z Shell):** A powerful shell with enhanced features such as smarter autocompletion. Basis of the “Oh My Zsh” framework.
+   - **Fish (Friendly Interactive SHell):** Designed to be user-friendly and interactive, with auto-suggestions and easy configuration.
+
+#### 3. **Shell Scripting and Components**
+   - A **shell script** is a file containing a series of commands that are executed sequentially, allowing tasks to be automated.
+   - **Basic components of a script:**
+     - **Variables:** For storing information (`name=“Fernando”`).
+     - **Conditional structures (`if`, `else`):** To make decisions in the script based on conditions.
+     - **Loops (`for`, `while`):** To repeat tasks multiple times.
+     - **Comments (`#`):** To explain the code and make it more readable.
+
+#### 4. **Practical Example: “The lockers script”**
+   - A practical script was analyzed that probably simulated interaction with “lockers” or resources, demonstrating how the above components are applied in a specific case.
+   - The objective was to understand the logic of a real script and how tasks are structured.
+
+#### 5. **Practical Exercise**
+   - Putting knowledge into practice to write or modify a simple script, consolidating learning.
+
+### 🛠️ **Why it is important**
+Mastering the Linux shell is **non-negotiable** in cybersecurity:
+- **Server Administration:** Most web, database, and application servers run on Linux.
+- **Forensic and Malware Analysis:** The most powerful tools are command line tools.
+- **Pentesting and Ethical Hacking:** Security assessment tools (such as those in Kali Linux) are used from the terminal.
+- **Automation:** Writing scripts allows you to perform complex tasks quickly, repetitively, and accurately.
+
+**Conclusion:** This module lays the foundation for navigating, managing, and automating tasks in any Linux environment, a fundamental skill for any technical role in security.
+
