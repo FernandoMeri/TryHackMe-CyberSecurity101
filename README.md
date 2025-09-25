@@ -288,3 +288,49 @@ This module explains the “backbone” of digital communications, a non-negotia
 
 > **Note:** This module lays the essential technical foundation for all subsequent rooms related to networking, pentesting, and forensics.
 
+# TryHackMe - Cyber Security 101
+
+## Module Completed: [Networking Essentials]
+
+**Completion Date:** [2025/09/25]
+**Module Objective:** Understand the functioning and importance of fundamental protocols that enable modern networks to operate, from automatic device configuration to global routing on the Internet.
+
+### 📚 What I Learned / Protocols Explored
+
+This module delves into the protocols that enable automatic and efficient network communication.
+
+#### 1. **DHCP (Dynamic Host Configuration Protocol)**
+   - **What does it do?** It automatically assigns IP addresses and other network parameters (such as the gateway and DNS server) to devices when they connect to a network.
+   - **Analogy:** It is the “automatic rental” of IP addresses on a network.
+   - **Importance in Cybersecurity:** A malicious DHCP server can trick devices into connecting to it, redirecting their traffic (“DHCP Spoofing” attack).
+
+#### 2. **ARP (Address Resolution Protocol)**
+   - **What does it do?** It finds the MAC (physical) address of a device when only its IP (logical) address is known within a local network.
+   - **Fernando's diagram:** “Who has this IP? -> Tell me your MAC.”
+   - **Importance in Cybersecurity:** Vulnerable to “ARP Spoofing” or “ARP Poisoning,” where an attacker can trick the network into sending traffic intended for someone else.
+
+#### 3. **ICMP (Internet Control Message Protocol)**
+   - **What does it do?** It is used to send control and error messages between network devices.
+   - **Key Tools:**
+     - **`Ping`:** Checks if a host is active and reachable on the network. (Uses ICMP Echo Request and Reply).
+     - **`Traceroute`/`Tracert`:** Discovers the route that packets take to reach a destination, showing all intermediate routers.
+   - **Importance in Cybersecurity:** Essential for network diagnostics. Attackers use it to “map” a network (discover active hosts). ICMP traffic is often blocked by firewalls to prevent this.
+
+#### 4. **Routing Protocols**
+   - **What do they do?** They are the “navigation systems” of routers. They allow them to share information with each other to find the best route to send packets across different networks.
+   - **Main Protocols:**
+     - **OSPF & EIGRP:** Used within large networks within the same organization (e.g., a company).
+     - **BGP (Border Gateway Protocol):** The protocol that **connects the Internet**. It manages routing *between* large service providers (ISPs). It is the most critical protocol globally.
+- **RIP:** An older and simpler protocol.
+- **Importance in Cybersecurity:** An attack on BGP can redirect Internet traffic on a massive scale. Understanding routing is key to defending an organization's perimeter network.
+
+#### 5. **NAT (Network Address Translation)**
+   - **What does it do?** It translates private IP addresses (e.g., `192.168.1.10`) from a local network to a single public IP address to access the Internet. It allows many devices to share a single public IP.
+   - **Analogy:** It is the “receptionist” of an office. All employees (private IPs) use the same office address (public IP) to send emails outside the office.
+   - **Importance in Cybersecurity:** It hides the internal structure of a network from the Internet, acting as a first layer of defense (concealment). It is essential in any home router.
+
+### 🛠️ **Practical Conclusion**
+These protocols are the “invisible magic” that makes networks work. A system administrator or cybersecurity professional must understand them in order to:
+-   **Diagnose problems** with connectivity effectively.
+-   **Understand and exploit** common vulnerabilities such as ARP Spoofing.
+-   **Secure the configuration** of routers and firewalls.
