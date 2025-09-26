@@ -435,3 +435,54 @@ The culminating hands-on exercise consisted of a forensic analysis simulation:
 Understanding these protocols is essential. While TLS protects application-specific communications, VPNs ensure complete network connectivity, and SSH guarantees secure remote access. The ability to analyze this traffic, even when encrypted, is a valuable skill for security auditing and incident response tasks.
 
 > This module lays the technical foundation for understanding how security is implemented in the digital communications we use every day.
+
+# TryHackMe - Cyber Security 101
+
+## Module Completed: Wireshark: The Basics
+
+**Completion Date:** [2025/09/26]
+**Module Objective:** Master the interface and essential functionalities of Wireshark, the standard tool for network traffic analysis, from loading captures to advanced filtering.
+
+### 📚 What I Learned / Skills Acquired
+
+This module provides a comprehensive understanding of Wireshark, transforming it from a complex tool into a manageable canvas for investigation.
+
+#### 1. **Tool Overview**
+-   **Use Cases:** Diagnosing network problems, detecting security anomalies, and investigating protocols.
+-   **GUI and Data:** Understanding the interface: Toolbar, filter bar, packet list pane, details pane, and bytes pane.
+-   **Loading PCAP Files:** Importing saved traffic captures for analysis.
+-   **Color Packets:** Using automatic and custom coloring to quickly identify protocols and anomalies.
+-   **Real-Time Traffic Capture:** Using the start/stop buttons to capture live traffic.
+- **Merge PCAP Files:** Combine multiple captures into a single file for analysis.
+- **View File Details:** Locate crucial metadata such as the SHA256 hash of the capture file.
+
+#### 2. **Packet Dissection**
+- **Layered Analysis:** Ability to expand and examine each layer of a packet (Ethernet, IP, TCP, HTTP, etc.) in the details panel.
+- **Field Interpretation:** Understanding the meaning of common fields such as MAC/IP addresses, ports, TCP flags, and HTTP methods.
+
+#### 3. **Packet Navigation**
+- **Packet Numbers:** Use unique numbers for quick reference and navigation.
+- **Go to a Packet:** Function to jump directly to a specific packet number.
+- **Search Packets:** Search for content within packets using text, hexadecimal, or regular expressions.
+- **Mark Packets and Comments:** Highlight important packets and add notes for further investigation.
+-   **Export Packets and Objects:** Extract specific packets or even entire files (executables, documents) transferred over the network (HTTP, SMB).
+-   **Time Display Format:** Switch to UTC time for accurate time correlation with other system logs.
+- **Expert Information:** Interpretation of suggestions and alerts (Chat, Note, Warn, Error) that Wireshark generates automatically.
+
+#### 4. **Packet Filtering - The Most Powerful Tool!**
+- **Philosophy:** “If you can click on it, you can filter it.”
+- **Apply as Filter:** Instant filtering by right-clicking on any field of interest.
+-   **Conversation Filter:** Isolation of all traffic between two hosts.
+-   **Color Conversation:** Visual highlighting of a conversation without hiding the rest of the traffic.
+-   **Prepare as Filter:** Construction of complex filter queries from a selected value.
+- **Apply as Column:** Add custom columns to the main list for better visualization.
+- **Follow Stream:** Reconstruct complete conversations (TCP, HTTP) to view application-level data exchange, including plain text credentials.
+
+### 🛠️ **Practical Conclusion**
+Wireshark is no longer a black box. It is now a tool with which I can:
+- **Conduct targeted investigations** using filters and searches.
+- **Extract concrete evidence** such as files or conversations.
+-   **Document findings** using comments and marks.
+-   **Understand network communication** at a deeply granular level.
+
+> **Key Skill Acquired:** The ability to transform large volumes of network traffic into actionable information, which is essential for pentesting, forensic analysis, and system administration tasks.
