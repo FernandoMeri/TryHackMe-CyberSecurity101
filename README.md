@@ -392,3 +392,46 @@ The fundamental skill acquired in this module is the ability to **“talk” dir
 -   **Gaining an in-depth understanding** of how the applications we use every day actually communicate.
 
 > **Main Achievement:** You no longer just understand the theory behind protocols; you know how to interact with them in a practical and effective way.
+
+# TryHackMe - Cyber Security 101
+
+## Module Completed: Networking Secure Protocols
+
+**Completion Date:** September 26, 2025
+**Module Objective:** Understand and apply key approaches to securing network communications, with a practical focus on encrypted traffic analysis.
+
+### 📚 Learning Summary
+
+This module explored the fundamental technologies that protect information in modern networks, going beyond theory to include essential forensic analysis practice.
+
+#### 1. **TLS/SSL: Encryption for Applications**
+- **Purpose:** To protect the confidentiality and integrity of data in transit for application protocols :cite[5].
+- **Application:** Transforms insecure protocols into secure ones (HTTP -> HTTPS, SMTP -> SMTPS) by adding a layer of encryption.
+- **Key Concept:** Uses digital certificates issued by Certification Authorities (CA) to authenticate servers and establish a secure connection.
+
+#### 2. **SSH: Secure Remote Access**
+- **Purpose:** To provide encrypted remote access to systems, as well as extended functions.
+- **Application:** Administrative access to servers, secure file transfer (SFTP), and tunneling for other protocols.
+- **Advantage:** Secure alternative to obsolete protocols such as Telnet.
+
+#### 3. **VPN: Virtual Private Network**
+- **Purpose:** Securely extend a local network across a public infrastructure such as the Internet by creating an encrypted “tunnel.”
+- **Application:** Connect remote offices of a company or allow individual users to securely access network resources from any location.
+- **Benefit:** Masks the user's real IP address and encrypts all connection traffic.
+
+### 🔬 Lab Exercise: Decrypting HTTPS Traffic with Wireshark
+
+The culminating hands-on exercise consisted of a forensic analysis simulation:
+- **Tools:** Wireshark and the Chromium browser.
+- **Objective:** Decrypt an HTTPS traffic capture (`randy-chromium.pcapng`) to analyze its content.
+- **Methodology:**
+1.  The Chromium browser was launched with the `--ssl-key-log-file` option to generate a log file of the TLS session keys (`ssl-key.log`).
+    2.  In Wireshark, the path to this file was configured in `Preferences > Protocols > TLS > (Pre)-Master-Secret log filename`.
+3.  After this configuration, Wireshark was able to decrypt the HTTPS traffic, revealing the underlying HTTP requests.
+- **Finding:** An authentication flag (`THM{B8WM6P}`) traveling in an HTTP POST request to a login form was successfully identified and retrieved, demonstrating the critical importance of TLS encryption.
+
+### 🛡️ Conclusion
+
+Understanding these protocols is essential. While TLS protects application-specific communications, VPNs ensure complete network connectivity, and SSH guarantees secure remote access. The ability to analyze this traffic, even when encrypted, is a valuable skill for security auditing and incident response tasks.
+
+> This module lays the technical foundation for understanding how security is implemented in the digital communications we use every day.
