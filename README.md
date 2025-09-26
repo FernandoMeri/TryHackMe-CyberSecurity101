@@ -523,3 +523,58 @@ This module focused on transforming Tcpdump from a complex tool into a manageabl
 Mastering Tcpdump involves understanding that it is not about memorizing commands, but rather **understanding the logic of filters and knowing how to construct specific queries**. The ability to accurately capture and filter network traffic from the terminal is a fundamental skill for troubleshooting, network monitoring, and security analysis tasks.
 
 > **Key Skill Acquired:** Being able to perform an initial and specific analysis of network traffic in environments where a graphical interface such as Wireshark is not available, especially in remote server administration via SSH.
+
+Module Completed: Nmap: The Basics
+Completion Date: [2025/09/26]
+Module Objective: Master the fundamental capabilities of Nmap for network discovery, port scanning, service detection, and result management in ethical hacking and network diagnostics.
+
+📚 What I Learned / Skills Acquired
+This module transformed Nmap from a simple port scanner into a comprehensive network exploration tool. The focus was on practical application for security assessments and network analysis.
+
+1. Network Discovery & Host Enumeration
+List Scan (-sL): Passive reconnaissance to enumerate targets without sending packets to the network.
+
+Ping Scan (-sn): Efficient host discovery using ICMP and ARP requests to identify active devices on a network.
+
+Forced Scan (-Pn): Treat all hosts as online, bypassing host discovery for networks that block ping requests.
+
+2. Port Scanning Techniques (The Core of Nmap)
+TCP Connect Scan (-sT): Completes full TCP three-way handshake. Reliable but easily detectable.
+
+TCP SYN Scan (-sS): Default when run with sudo. Sends SYN packet only (half-open scan). Faster and stealthier.
+
+UDP Scan (-sU): Discovers open UDP ports. Slower due to UDP's connectionless nature.
+
+Port Specification: Mastered using -p- for all ports, -F for top 100 ports, and custom ranges like -p 22,80,443.
+
+3. Service & OS Detection
+Version Detection (-sV): Probes open ports to determine service/application versions.
+
+OS Fingerprinting (-O): Detects operating system based on network stack characteristics.
+
+Aggressive Scan (-A): Combines OS detection, version detection, script scanning, and traceroute.
+
+4. Timing & Performance Optimization
+Timing Templates (-T0 to -T5): From paranoid (T0) to insane (T5). Learned to balance speed vs. stealth.
+
+Parallelism Control: --min-parallelism and --max-parallelism for managing concurrent probes.
+
+Rate Management: --min-rate and --max-rate for precise packet control per second.
+
+Host Timeouts: --host-timeout for handling slow or unresponsive targets.
+
+5. Output Formats & Verbosity
+Verbosity Levels (-v, -vv, -vvv): Real-time progress monitoring during long scans.
+
+Debug Levels (-d, -dd, -d9): Detailed technical output for troubleshooting.
+
+Output Formats: Mastered -oN (normal), -oX (XML), -oG (grepable), and -oA (all formats).
+
+🛠️ Practical Conclusion
+The key insight from this module is that effective Nmap usage requires strategic thinking about the scanning context. The same target requires different approaches for a stealthy penetration test versus a quick network inventory.
+
+Critical Realization: Running Nmap with sudo privileges unlocks its full potential, particularly the stealthy SYN scan (-sS) which becomes the default. Without privileges, Nmap falls back to the slower, more detectable TCP Connect scan (-sT).
+
+The ability to chain options like sudo nmap -sS -sV -O -T4 -A -p- -oA full_scan target represents a professional-grade approach to comprehensive network assessment.
+
+Key Skill Acquired: Designing tailored scanning methodologies based on specific objectives—whether for rapid reconnaissance, stealthy penetration testing, or detailed service enumeration.
