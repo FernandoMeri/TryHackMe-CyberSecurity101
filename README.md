@@ -486,3 +486,40 @@ Wireshark is no longer a black box. It is now a tool with which I can:
 -   **Understand network communication** at a deeply granular level.
 
 > **Key Skill Acquired:** The ability to transform large volumes of network traffic into actionable information, which is essential for pentesting, forensic analysis, and system administration tasks.
+
+# TryHackMe - Cyber Security 101
+
+## Module Completed: Tcpdump: The Basics
+
+**Completion Date:** September 26, 2025
+**Module Objective:** Gain practical proficiency in using Tcpdump, the command-line-based packet analyzer, for capturing, filtering, and interpreting network traffic.
+
+### 📚 What I Learned / Skills Acquired
+
+This module focused on transforming Tcpdump from a complex tool into a manageable Swiss Army knife for network analysis directly from the terminal.
+
+#### 1. **Basic Filtering: The Heart of Tcpdump**
+- **Filtering by Host:** `tcpdump host example.com` to isolate traffic related to a specific IP or hostname.
+- **Filtering by Port:** `tcpdump port 53` to capture traffic from a specific service (e.g., DNS).
+- **Protocol Filtering:** `tcpdump icmp` to show only packets from a specific protocol (e.g., ICMP for pings).
+- **Specifying Address:** Use `src` (source) and `dst` (destination) to refine filters, such as `src host 192.168.1.1`.
+
+#### 2. **Advanced Filtering: Logical and Bit-Level Operators**
+- **Combine Conditions:** Use logical operators `and`, `or`, and `not` to create complex filters. Example: `tcpdump ‘udp or icmp’`.
+- **Filtering by TCP Flags:** Bit-level analysis to identify packets with specific flags. For example, `tcpdump ‘tcp[tcpflags] == tcp-rst’` captures packets with only the RST flag set. This approach is powerful for detecting scans or connectivity issues.
+
+#### 3. **Output and Display Options (Your “Glasses”)**
+- **`-q` (Quick Output):** Displays a simplified, clean view of traffic.
+- **`-e` (Link Header):** Includes MAC addresses in the output, crucial for analyzing traffic on the local network (e.g., ARP packets).
+- **`-A` (ASCII Output):** Shows the packet contents in plain text, ideal for reading unencrypted data such as HTTP requests.
+- **`-X` / `-xx` (Hexadecimal and ASCII Output):** Reveals the complete contents of the packet in hexadecimal along with its ASCII representation. It is the ultimate tool for analyzing any type of traffic, especially when it is encrypted.
+
+#### 4. **Reading and Analyzing PCAP Files**
+- **`-r` (Read from File):** The option `tcpdump -r capture.pcap` allows you to analyze saved traffic captures, facilitating post-incident forensic analysis.
+- **Integration with other tools:** Use pipes (`|`) with tools such as `wc -l` to count packets that match a filter.
+
+### 🛠️ Practical Conclusion
+
+Mastering Tcpdump involves understanding that it is not about memorizing commands, but rather **understanding the logic of filters and knowing how to construct specific queries**. The ability to accurately capture and filter network traffic from the terminal is a fundamental skill for troubleshooting, network monitoring, and security analysis tasks.
+
+> **Key Skill Acquired:** Being able to perform an initial and specific analysis of network traffic in environments where a graphical interface such as Wireshark is not available, especially in remote server administration via SSH.
