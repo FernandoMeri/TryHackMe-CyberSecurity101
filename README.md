@@ -579,7 +579,7 @@ The ability to chain options like sudo nmap -sS -sV -O -T4 -A -p- -oA full_scan 
 
 Key Skill Acquired: Designing tailored scanning methodologies based on specific objectives—whether for rapid reconnaissance, stealthy penetration testing, or detailed service enumeration.
 
-Module Completed: Cryptography Basics
+## Module Completed: Cryptography Basics ##
 Completion Date: [2025/09/29]
 Basic Fundamentals of Cryptography
 
@@ -665,3 +665,65 @@ Widely used in cryptographic algorithms.
 
 This first module lays the foundations of cryptography, introducing its terms, its importance in digital security, a historical example (Caesar), types of encryption, and fundamental mathematical operations (XOR and modulo). This knowledge will be essential for understanding more advanced algorithms in the following modules.
 
+
+## Module Completed: Public Key Cryptography Basics ##
+Completion Date: [2025/09/29]
+Module Objective: Understand and apply fundamental asymmetric cryptography concepts including RSA, Diffie-Hellman, SSH, digital signatures, and PGP/GPG for secure communications.
+
+📚 What I Learned / Skills Acquired
+This module demystified public key cryptography, transforming abstract mathematical concepts into practical tools for secure digital communication and identity verification.
+
+1. Common Use of Asymmetric Encryption
+Core Concept: Leveraging the slowness of asymmetric encryption to securely exchange symmetric keys
+
+Practical Application: Using asymmetric crypto once to establish a shared secret, then switching to fast symmetric encryption for bulk data transfer
+
+Key Insight: Asymmetric = secure key exchange, Symmetric = efficient data encryption
+
+2. RSA (Rivest-Shamir-Adleman)
+Mathematical Foundation: Security relies on the computational difficulty of factoring large prime numbers
+
+Key Generation Process: Mastered the steps: prime selection (p, q), modulus calculation (n = p×q), Euler's totient (φ(n)), and exponent selection (e, d)
+
+Practical Computation: Learned to perform modular exponentiation for encryption/decryption
+
+CTF Relevance: Recognized RSA as a frequent CTF challenge requiring manipulation of variables (p, q, n, e, d, m, c)
+
+3. Diffie-Hellman Key Exchange
+Elegant Solution: Enables two parties to establish a shared secret over an insecure channel without prior secrets
+
+Mathematical Execution: Understood the modular arithmetic behind public value exchange (g^a mod p, g^b mod p) and shared secret derivation
+
+Real-world Integration: Recognized its combination with RSA for comprehensive security (DH for key agreement, RSA for authentication)
+
+4. SSH (Secure Shell)
+Dual Authentication: Comprehended the two-way verification process: client verifies server identity, then server authenticates client
+
+Key-based Authentication: Mastered SSH key generation (ssh-keygen), algorithm selection (ed25519, RSA), and proper key management
+
+Security Practices: Understood critical safeguards: never share private keys, use passphrases, set correct file permissions (600)
+
+Penetration Testing Utility: Learned to use SSH keys for upgrading reverse shells to stable, fully-functional terminals
+
+5. Digital Signatures and Certificates
+Identity Assurance: Understood how digital signatures verify message authenticity and integrity
+
+Non-repudiation: Recognized how signatures prevent senders from denying message authorship
+
+Certificate Authority Role: Comprehended the trust hierarchy in PKI (Public Key Infrastructure)
+
+6. PGP and GPG
+Email Security: Learned to use GPG for encrypting emails and files, and creating digital signatures
+
+Key Management: Mastered GPG key generation with modern algorithms (ECC/Curve25519), expiration settings, and backup procedures
+
+Practical Operations: Understood the workflow of public key distribution for encryption and private key usage for decryption
+
+CTF Applications: Recognized GPG decryption as common challenge, with gpg2john for passphrase recovery attempts
+
+🛠️ Practical Conclusion
+Public key cryptography is the foundation of modern secure communications. The key realization from this module is that each algorithm serves specific purposes: RSA for encryption and signatures, Diffie-Hellman for secure key establishment, and practical implementations like SSH and GPG for real-world security applications.
+
+The mathematical concepts, while initially abstract, become manageable through systematic approaches to modular arithmetic and understanding the "why" behind each operation. The transition from theoretical cryptography to practical implementation in tools like SSH and GPG demonstrates how these concepts protect everyday digital interactions.
+
+Key Skill Acquired: Ability to select and implement appropriate asymmetric cryptography solutions based on specific security requirements, whether for secure shell access, encrypted email, or establishing confidential communications channels.
