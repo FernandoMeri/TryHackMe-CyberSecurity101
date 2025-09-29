@@ -786,3 +786,49 @@ Hashing serves as the foundation for multiple cybersecurity domains, from securi
 The progression from theoretical concepts to practical tools like Hashcat and John the Ripper demonstrates how abstract cryptographic principles translate into real-world security applications. Understanding both the strengths of modern hashing algorithms and the vulnerabilities of historical approaches provides crucial context for evaluating system security.
 
 Key Skill Acquired: The ability to implement secure hashing practices for password protection, recognize and classify hash types in diverse environments, and apply appropriate tools and techniques for password recovery and integrity verification across multiple scenarios.
+
+# Module Completed: John The Ripper - The Basics
+
+**Completion Date:** [2025/09/29]
+**Module Objective:** Gain practical, hands-on experience with John the Ripper to crack various types of password hashes and protected files, understanding its core modes and auxiliary tools.
+
+## 📚 What I Learned / Skills Acquired
+
+This module transformed John the Ripper from a theoretical tool into a practical Swiss Army knife for password recovery across multiple scenarios.
+
+### 1. Basic Syntax & Hash Cracking
+- **Fundamental Command Structure:** Mastered the basic syntax `john [options] [file path]` for initiating cracking sessions.
+- **Automated Cracking:** Used `john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt` for automatic hash type detection and cracking.
+- **Format-Specific Cracking:** Learned to specify hash formats for precision using `--format=raw-md5`, `--format=raw-sha1`, `--format=nt`, etc., after identifying hashes with tools like `hash-identifier`.
+
+### 2. Single Crack Mode
+- **Leveraging Usernames:** Utilized the `--single` flag for a fast first attack, which heuristically generates password guesses based on the provided username and GECOS information.
+- **File Format Requirement:** Understood the critical requirement of formatting input files as `username:hash` for this mode to function.
+
+### 3. Custom Rules for Complex Policies
+- **Exploiting Predictability:** Created custom rules in the `john.conf` file to exploit predictable user behavior when meeting password complexity requirements (e.g., capitalizing the first letter and appending numbers/symbols).
+- **Rule Syntax:** Gained foundational knowledge of rule syntax, including:
+    - `Az` to append characters.
+    - `A0` to prepend characters.
+    - `c` to capitalize letters.
+    - Character sets like `[0-9]` and `[A-Z]`.
+- **Implementation:** Successfully called custom rules in attacks using the `--rule=RuleName` flag.
+
+### 4. Cracking Hashes from /etc/shadow
+- **The Unshadow Process:** Learned to combine the `/etc/passwd` and `/etc/shadow` files into a format John can understand using the `unshadow` tool: `unshadow local_passwd local_shadow > unshadowed.txt`.
+- **Cracking System Passwords:** Fed the output directly into John to crack Linux user passwords, a common privilege escalation step.
+
+### 5. Cracking Password-Protected Files & Keys
+Mastered the use of auxiliary tools to extract hashes from protected resources for John to crack:
+- **ZIP Files:** `zip2john secure.zip > zip_hash.txt`
+- **RAR Files:** `rar2john secure.rar > rar_hash.txt`
+- **SSH Private Keys:** `ssh2john id_rsa > ssh_hash.txt`
+
+## 🛠️ Practical Conclusion
+
+John the Ripper's power lies in its flexibility. This module provided a structured approach to tackling password cracking: start with fast attacks like Single Crack mode, move to large wordlists, and finally, employ targeted custom rules or formats. The key to efficiency is correctly identifying the hash type and using the appropriate `*2john` tool for files and keys.
+
+The ability to methodically work through cracking Windows and Linux authentication hashes, protected archives, and SSH keys is a fundamental skill for penetration testing and red team operations.
+
+**Key Skill Acquired:** A systematic methodology for password cracking across diverse scenarios, from basic hash files to real-world artifacts like stolen credential databases and encrypted sensitive files.
+
