@@ -727,3 +727,62 @@ Public key cryptography is the foundation of modern secure communications. The k
 The mathematical concepts, while initially abstract, become manageable through systematic approaches to modular arithmetic and understanding the "why" behind each operation. The transition from theoretical cryptography to practical implementation in tools like SSH and GPG demonstrates how these concepts protect everyday digital interactions.
 
 Key Skill Acquired: Ability to select and implement appropriate asymmetric cryptography solutions based on specific security requirements, whether for secure shell access, encrypted email, or establishing confidential communications channels.
+
+## Module Completed: Hashing Basics
+Completion Date: [2025/09/29]
+Module Objective: Master the fundamental concepts of cryptographic hashing, including hash functions, password storage security, hash recognition, cracking techniques, and data integrity verification.
+
+📚 What I Learned / Skills Acquired
+This module provided a comprehensive understanding of hashing as a cornerstone of cybersecurity, covering both defensive applications for security and offensive techniques for penetration testing.
+
+1. Hash Functions Fundamentals
+Core Concept: Understanding hashing as a one-way process that creates fixed-size digital fingerprints from data of any size
+
+Key Properties: Mastered the five essential characteristics of cryptographic hash functions: determinism, fixed output size, speed, irreversibility, and avalanche effect
+
+Collision Theory: Learned about hash collisions and why they're mathematically inevitable but practically difficult to achieve with secure algorithms
+
+Real-World Example: Demonstrated how a single bit change completely transforms the hash output across MD5, SHA1, and SHA256
+
+2. Password Storage Security
+Security Evolution: Understood the progression from plaintext storage to modern salted hashing techniques
+
+Common Vulnerabilities: Analyzed real-world security failures including RockYou (plaintext), Adobe (weak encryption), and LinkedIn (unsalted SHA1)
+
+Rainbow Table Defense: Comprehended how unique salts defeat precomputed attack tables by ensuring identical passwords produce different hashes
+
+Modern Best Practices: Learned to implement secure password storage using algorithms like Argon2, Bcrypt, and PBKDF2 with proper salting
+
+3. Hash Recognition and Identification
+Linux/Unix Systems: Mastered identification through prefix analysis ($y$ for yescrypt, $6$ for SHA512, $1$ for MD5)
+
+Windows Environments: Learned to distinguish NTLM hashes and understand their relationship to MD4
+
+Contextual Analysis: Developed skills to identify hash types based on their source (web applications, system files, databases)
+
+Tool Proficiency: Gained experience with automated recognition tools while understanding their limitations and the importance of manual verification
+
+4. Password Cracking Techniques
+Tool Ecosystem: Became proficient with Hashcat and John the Ripper for practical password recovery
+
+Attack Strategies: Learned to apply dictionary attacks using wordlists like rockyou.txt against various hash types
+
+Hardware Considerations: Understood the performance differences between CPU-based (John) and GPU-optimized (Hashcat) approaches
+
+Practical Syntax: Mastered command structure for both tools, including hash type specification and attack mode selection
+
+5. Data Integrity Verification
+File Verification: Learned to use hashing to ensure file integrity for downloads and detect unauthorized modifications
+
+Duplicate Detection: Understood how identical hashes identify duplicate files across systems
+
+HMAC Implementation: Comprehended keyed-hash message authentication for ensuring both authenticity and integrity
+
+Real-World Application: Practiced checksum verification for ISO files and understanding PGP-signed hash lists
+
+🛠️ Practical Conclusion
+Hashing serves as the foundation for multiple cybersecurity domains, from securing user authentication to ensuring data integrity. The key insight from this module is the dual nature of hashing knowledge: defensive practitioners must understand secure implementation to protect systems, while offensive specialists need recognition and cracking skills for penetration testing and recovery operations.
+
+The progression from theoretical concepts to practical tools like Hashcat and John the Ripper demonstrates how abstract cryptographic principles translate into real-world security applications. Understanding both the strengths of modern hashing algorithms and the vulnerabilities of historical approaches provides crucial context for evaluating system security.
+
+Key Skill Acquired: The ability to implement secure hashing practices for password protection, recognize and classify hash types in diverse environments, and apply appropriate tools and techniques for password recovery and integrity verification across multiple scenarios.
