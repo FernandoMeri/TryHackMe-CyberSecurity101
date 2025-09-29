@@ -578,3 +578,90 @@ Critical Realization: Running Nmap with sudo privileges unlocks its full potenti
 The ability to chain options like sudo nmap -sS -sV -O -T4 -A -p- -oA full_scan target represents a professional-grade approach to comprehensive network assessment.
 
 Key Skill Acquired: Designing tailored scanning methodologies based on specific objectives—whether for rapid reconnaissance, stealthy penetration testing, or detailed service enumeration.
+
+Module Completed: Cryptography Basics
+Completion Date: [2025/09/29]
+Basic Fundamentals of Cryptography
+
+This module introduces the essential concepts that serve as the basis for understanding modern cryptography. The main learning points are summarized below.
+
+🎯 Learning Objectives
+
+Understand key cryptography terms.
+
+Understand the importance of cryptography in computer security.
+
+Study a classic example: Caesar cipher.
+
+Differentiate between symmetric and asymmetric encryption.
+
+Become familiar with the basic mathematics applied to cryptography (XOR and modulus).
+
+📖 Key Concepts
+Text and encryption
+
+Plaintext: original (readable) message.
+
+Ciphertext: encoded (unreadable) message.
+
+Encryption: algorithm for converting plain text ↔ ciphertext.
+
+Key: string of bits used in encryption/decryption.
+
+Encryption (process): transforming plain text → ciphertext with an algorithm and key.
+
+Decryption (process): recovering plain text from ciphertext with the correct algorithm and key.
+
+Importance of cryptography
+
+It guarantees confidentiality, integrity, authenticity, and non-repudiation in communication and data storage.
+
+It is the basis of security in modern systems (HTTPS, digital signatures, secure storage, etc.).
+
+Caesar cipher
+
+Classic example of substitution cipher.
+
+It consists of shifting letters of the alphabet a fixed number of positions.
+
+Simple, but easy to break using frequency analysis.
+
+Symmetric and asymmetric encryption
+
+Symmetric: same key for encryption and decryption (e.g., AES).
+
+Asymmetric: uses a pair of keys (public and private) for encryption/decryption (e.g., RSA).
+
+Basic mathematics in cryptography
+XOR operation (⊕)
+
+Returns 1 if the bits are different, 0 if they are the same.
+
+Properties:
+
+A ⊕ A = 0
+
+A ⊕ 0 = A
+
+Commutative and associative.
+
+Application: can be used as basic symmetric encryption (C = P ⊕ K).
+
+Modulo operation (%)
+
+Returns the remainder of a division (X % Y).
+
+Examples:
+
+25 % 5 = 0
+
+23 % 6 = 5
+
+Result always in range 0 to n-1.
+
+Widely used in cryptographic algorithms.
+
+✅ Conclusion
+
+This first module lays the foundations of cryptography, introducing its terms, its importance in digital security, a historical example (Caesar), types of encryption, and fundamental mathematical operations (XOR and modulo). This knowledge will be essential for understanding more advanced algorithms in the following modules.
+
