@@ -1025,3 +1025,37 @@ I. Concept of NTLM    Brief explanation: NTLM does not send the password, but ra
 II. The Role of Responder    Responder is a passive man-in-the-middle that listens for specific requests (such as NetBIOS/LLMNR). Explain: Responder impersonates a server so that the victim sends the hash to it.    Demonstrates knowledge of network and attack tools.
 
 III. The Defense How to mitigate this attack: 1. Disable LLMNR/NetBIOS. 2. Enforce SMB signing. 3. Use Kerberos authentication instead of NTLM.    High Value: Demonstrates that you know how to secure, not just attack.
+
+## Module Completed: Blue
+
+**Completion Date:** [2025/10/01]
+
+Title: Exploit MS17-010 (EternalBlue) and Credential Cracking: Analysis of a Critical Attack
+I. Project Objective
+This project documents the complete process of exploiting the MS17-010 (EternalBlue) flaw in a vulnerable Windows system, covering everything from reconnaissance and the initial attack to advanced post-exploitation (privilege escalation and credential theft).
+
+II. Attack Phases (Workflow)
+Phase    Tools Used    Key Commands
+Reconnaissance    Nmap    The vulnerability to the SMB protocol was confirmed by a scan (nmap -sV) that showed port 445/TCP open on an unpatched Windows system.
+Exploitation    Metasploit    The exploit/windows/smb/ms17_010_eternalblue module was used to obtain remote code execution (RCE).
+Conversion    Post-Module    The initial unstable shell was converted to a more robust Meterpreter shell using the post/multi/manage/shell_to_meterpreter post-module.
+Escalation and Persistence    Meterpreter    Getsystem was executed to reach the NT AUTHORITY\SYSTEM privilege level, and the migrate [PID] command was used to move the session to a stable process.
+Credential Theft    Meterpreter    Hashdump was executed to extract the hashes of local user passwords.
+
+Export to Spreadsheets
+III. Cracking and Final Credentials
+Non-default user found: [Username response]
+
+Hash obtained: [Copied hash]
+
+Cracked password: [Decrypted password response]
+
+IV. Mitigation and Defense (The Value of the Blue Team)
+The fundamental value of this exploit is understanding how to prevent it. The following defensive measures completely close this vulnerability:
+
+Patching: Immediately install Microsoft's MS17-010 security patch.
+
+Disable SMBv1: Configure systems to only use more secure versions of the SMB protocol (v2 and v3).
+
+Network Segmentation: Restrict access to port 445/TCP from untrusted zones, ensuring that only authorized internal systems can communicate via SMB.
+
