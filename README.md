@@ -1059,3 +1059,31 @@ Disable SMBv1: Configure systems to only use more secure versions of the SMB pro
 
 Network Segmentation: Restrict access to port 445/TCP from untrusted zones, ensuring that only authorized internal systems can communicate via SMB.
 
+# Module Completed: Web Application Basics
+
+**Completion Date:** [2025/10/01]
+
+Title: Fundamentals of Web Applications: HTTP Architecture and Security Analysis
+I. Project Objective
+To document the fundamental components of web applications, with a focus on HTTP communication security, as a basis for understanding and mitigating injection and Cross-Site Scripting (XSS) attacks.
+
+II. Web Application Architecture
+A distinction is made between the interface (front-end), consisting of HTML (structure), CSS (style), and JavaScript (behavior), and the back-end, which includes the server and database (the main target of SQL injection).
+
+III. Analysis of HTTP Communication
+Security focuses on manipulating the flow of Requests and Responses:
+
+Component    Security Risk (Focus)
+GET/POST Methods    GET (get data): Should not carry sensitive information in the URL. POST (send data): Main target of malicious data injection.
+Headers    Carry authentication tokens and cookies. They are manipulated by attackers for identity theft (e.g., changing the User-Agent).
+Query String (?key=value)    The most common attack zone; modifying these values can lead to SQLi or XSS.
+
+Export to Spreadsheets
+IV. Key Defense: Security Headers (Blue Team)
+The following headers are essential for mitigating the most common browser-level attacks:
+
+Content-Security-Policy (CSP): Implements a whitelist for scripts and resources, mitigating XSS.
+
+Strict-Transport-Security (HSTS): Forces the browser to use HTTPS to prevent protocol downgrade attacks.
+
+Set-Cookie: Must include the HttpOnly (protects against theft by XSS) and Secure (only sent over HTTPS) flags.
