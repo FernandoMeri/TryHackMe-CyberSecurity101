@@ -1108,3 +1108,26 @@ Control Flow Bypass: Security validation (e.g., logins, age verification) should
 III. Code Forensics (Information Gathering)
 Minification and Obfuscation: These techniques only hide the code from plain sight, but do not make it more secure. The attacker uses online deobfuscation tools to reverse the process and search for API keys, tokens, or vulnerable business logic in the source code.
 
+## Module Completed: SQL Fundamentals
+
+**Completion Date:** [2025/10/01]
+
+Title: SQL Fundamentals: Risk Analysis and Attack Surface for SQL Injection (SQLi)
+I. Project Objective
+To document the structure of relational databases (SQL) and the use of manipulation commands as a basis for understanding SQL injection (SQLi) attacks.
+
+II. The Critical Attack Surface (Validation Failure)
+The main security risk is concentrated in the manipulation of CRUD operations through user input:
+
+WHERE Clause Attack: Every successful SQLi attack focuses on manipulating the WHERE clause (used in SELECT, UPDATE, DELETE) to force the condition to always be true (TRUE).
+
+Authentication Bypass: The fundamental payload ' OR 1=1 -- is injected into a login field to bypass password validation.
+
+III. Data Extraction Commands and Functions
+Once a vulnerability is exploited, the attacker uses the following functions to steal information:
+
+Command    Security Purpose    Use in SQLi (Attack Example)
+SELECT    Read data from the database.    UNION SELECT is injected to combine and dump data from hidden tables (e.g., users).
+CONCAT()    Combines multiple fields into a single string.    Used with UNION SELECT to steal combined credentials: CONCAT(username, ‘:’, password).
+LENGTH() / SUBSTRING()    Functions that extract length and substrings.    Essential in Blind SQLi (Blind SQL Injection) attacks to guess table names and passwords one character at a time.
+SHOW TABLES / DESCRIBE    DB mapping functions.    Used by the attacker to guess the internal structure of the database and the exact names of the columns to steal.
