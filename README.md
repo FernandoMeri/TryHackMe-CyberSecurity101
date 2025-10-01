@@ -1087,3 +1087,24 @@ Content-Security-Policy (CSP): Implements a whitelist for scripts and resources,
 Strict-Transport-Security (HSTS): Forces the browser to use HTTPS to prevent protocol downgrade attacks.
 
 Set-Cookie: Must include the HttpOnly (protects against theft by XSS) and Secure (only sent over HTTPS) flags.
+
+## Module Completed: JavaScript Essentials
+
+**Completion Date:** [2025/10/01]
+
+Title: JavaScript Essentials: Risk Analysis and Injection Techniques for XSS
+I. Project Objective
+To analyze the role of JavaScript in web applications from a security perspective, identifying the risks posed by weak implementations and techniques used for malicious code injection (XSS).
+
+II. Key Attack Mechanisms
+The following points represent the most significant security flaws that allow attacks via JavaScript:
+
+Direct Script Injection: The attacker uses the <script> tag (internal or external) in an input field to cause the browser to execute unwanted code.
+
+Abuse of Dialog Functions: The attacker's use of functions such as alert() or prompt() is the standard method for testing the existence of an XSS and, in extreme cases, causing a Client Denial of Service.
+
+Control Flow Bypass: Security validation (e.g., logins, age verification) should NEVER reside in client-side JavaScript, as the attacker can easily bypass if-else statements to gain unauthorized access.
+
+III. Code Forensics (Information Gathering)
+Minification and Obfuscation: These techniques only hide the code from plain sight, but do not make it more secure. The attacker uses online deobfuscation tools to reverse the process and search for API keys, tokens, or vulnerable business logic in the source code.
+
