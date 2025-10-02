@@ -1131,3 +1131,27 @@ SELECT    Read data from the database.    UNION SELECT is injected to combine an
 CONCAT()    Combines multiple fields into a single string.    Used with UNION SELECT to steal combined credentials: CONCAT(username, ‘:’, password).
 LENGTH() / SUBSTRING()    Functions that extract length and substrings.    Essential in Blind SQLi (Blind SQL Injection) attacks to guess table names and passwords one character at a time.
 SHOW TABLES / DESCRIBE    DB mapping functions.    Used by the attacker to guess the internal structure of the database and the exact names of the columns to steal.
+
+## Module Completed: Burp Suite: The Basics
+
+**Completion Date:** [2025/10/02]
+
+Title: Burp Suite: The Basics - Interception Flow and Attack Principles
+I. Module Objective
+Ensure control over web traffic using Burp Proxy to intercept, inspect, and modify HTTP/S requests. This is the foundational step for performing injection tests (SQLi, XSS, etc.).
+
+II. Attack Flow: From Client to Server
+The main value of Burp Suite is to convert the browser from a spectator to an active manipulator, demonstrating that client-side filters are useless for security.
+
+Tool    Main Function    Role in the Attack
+Proxy    Interception and Analysis.    Captures the request before it reaches the server. Allows manipulation of the payload in situ.
+Repeater    Repetitive Testing.    Receives the request from the Proxy and sends it multiple times with modified payloads for fuzzing or manual exploitation.
+Target    Reconnaissance (Map).    Maps the entire structure of the application (Site map) and identifies hidden endpoints that can be attacked.
+
+Export to Spreadsheets
+III. Mastered Security Concepts
+Filter Bypass: Understanding that client-side (browser) filters can be easily evaded, making request manipulation in the proxy the only effective method of attack.
+
+Scope: Clearly define the limits of the pentest to focus traffic only on the target, eliminating third-party “noise.”
+
+HTTPS Fundamentals: Knowledge of the CA Certificate installation process to intercept and decrypt encrypted traffic (TLS/SSL).
