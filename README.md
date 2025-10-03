@@ -1274,4 +1274,71 @@ Security assessment of authentication systems
 
 Educational understanding of brute force vulnerabilities
 
+Part of TryHackMe's Cyber Security 101 Path
+
+# Gobuster - Web Reconnaissance Tool | TryHackMe Completion
+## Completion Date: [2025/10/03]
+## 🎯 Module Overview
+Completion of the Gobuster module covering web directory enumeration, subdomain discovery, and virtual host identification.
+
+## 🔧 Skills Acquired
+
+### Directory & File Enumeration (dir mode)
+```bash
+# Basic directory scanning
+gobuster dir -u http://target.com -w wordlist.txt
+
+# With file extensions
+gobuster dir -u http://target.com -w wordlist.txt -x .php,.html,.js
+
+# With authentication and cookies
+gobuster dir -u http://target.com -w wordlist.txt -U user -P pass -c "session=abc123"
+Subdomain Discovery (dns mode)
+bash
+# Subdomain enumeration
+gobuster dns -d target.com -w subdomains.txt
+
+# With IP resolution
+gobuster dns -d target.com -w subdomains.txt -i
+Virtual Host Identification (vhost mode)
+bash
+# Virtual host discovery
+gobuster vhost -u http://target-ip -w wordlist.txt --domain target.com --append-domain --exclude-length 300
+🎯 Key Competencies
+Tool Mastery
+Three Operational Modes: dir, dns, vhost
+
+Parameter Optimization: Thread management, delays, extensions
+
+Result Interpretation: HTTP status codes, response sizes, DNS records
+
+Wordlist Management: Selection and customization for different scenarios
+
+Technical Understanding
+Difference between DNS subdomains and virtual hosts
+
+HTTP protocol and header manipulation
+
+Web server architecture and virtual hosting
+
+Stealth scanning techniques to avoid detection
+
+Practical Application
+Comprehensive web asset discovery
+
+Identification of hidden administrative interfaces
+
+Development and testing environment detection
+
+Backup file and sensitive directory location
+
+🛡️ Professional Insights
+Importance of thorough reconnaissance in penetration testing
+
+How hidden assets become attack vectors
+
+Defense strategies against enumeration attacks
+
+Log monitoring for reconnaissance detection
+
 Part of TryHackMe's Cyber Security 101 Path 
