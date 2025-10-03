@@ -1155,3 +1155,69 @@ Filter Bypass: Understanding that client-side (browser) filters can be easily ev
 Scope: Clearly define the limits of the pentest to focus traffic only on the target, eliminating third-party “noise.”
 
 HTTPS Fundamentals: Knowledge of the CA Certificate installation process to intercept and decrypt encrypted traffic (TLS/SSL).
+
+# OWASP Top 10 - 2021 | TryHackMe Completion
+## Completion Date: [2025/10/03]
+
+## 📋 Module Overview
+Completion of the OWASP Top 10 2021 module covering the most critical web application security risks.
+
+## 🎯 Skills Acquired
+
+### 1. Broken Access Control (IDOR)
+- Identification and exploitation of Insecure Direct Object References
+- Authorization bypass techniques
+- Horizontal and vertical privilege escalation
+
+### 2. Cryptographic Failures  
+- Hash analysis and cracking methodologies
+- Data encryption best practices
+- Secure transmission protocols
+
+### 3. Injection Attacks
+- SQL injection exploitation
+- Command injection techniques
+- Input validation and sanitization
+
+### 4. Insecure Design
+- Architectural security flaws identification
+- Threat modeling concepts
+- Secure development lifecycle principles
+
+### 5. Security Misconfiguration
+- Service hardening techniques
+- Default credentials exploitation
+- Debug interface security
+
+### 6. Vulnerable Components
+- Vulnerability scanning with WPScan
+- Exploit research and application
+- Patch management strategies
+
+### 7. Authentication Failures
+- Brute force attack methodologies
+- Session management security
+- Multi-factor authentication implementation
+
+### 8. Software Integrity Failures
+- JWT token security analysis
+- Data integrity verification
+- Hash validation techniques
+
+### 9. Security Logging & Monitoring
+- Log analysis and correlation
+- Threat detection strategies
+- Incident response preparation
+
+### 10. SSRF (Server-Side Request Forgery)
+- Internal network enumeration
+- Cloud metadata exploitation
+- Request validation mechanisms
+
+## 🛠️ Practical Experience
+- Hands-on exploitation exercises
+- Real-world vulnerability scenarios
+- Defense implementation strategies
+
+## 📚 Certification
+Module completed as part of TryHackMe's Cyber Security 101 path 
