@@ -1425,3 +1425,92 @@ Service monitoring for bind shells
 
 File integrity monitoring for web shells
 
+# SQLMap Basics - SQL Injection Automation | TryHackMe Completion
+##Completion Date: [2025/10/03]
+
+## 🎯 Module Overview
+Completion of the SQLMap Basics module covering automated detection and exploitation of SQL injection vulnerabilities.
+
+## 🔧 Skills Acquired
+
+### SQLMap Command Mastery
+```bash
+# Basic detection
+sqlmap -u "http://target.com/search?cat=1"
+
+# Database enumeration
+sqlmap -u "http://target.com/search?cat=1" --dbs
+
+# Table enumeration
+sqlmap -u "http://target.com/search?cat=1" -D database_name --tables
+
+# Data extraction
+sqlmap -u "http://target.com/search?cat=1" -D database_name -T table_name --dump
+
+# POST request testing
+sqlmap -r request_file.txt
+Injection Types Identified
+Boolean-based Blind SQLi
+
+Time-based Blind SQLi
+
+Error-based SQLi
+
+UNION-based SQLi
+
+Advanced Techniques
+Parameter specification with -p
+
+Batch mode for automated testing (--batch)
+
+Interactive wizard mode (--wizard)
+
+Request file processing for POST data
+
+Comprehensive database structure mapping
+
+🎯 Key Competencies
+Tool Proficiency
+Automated vulnerability detection
+
+Progressive database enumeration
+
+Mass data extraction capabilities
+
+Support for various SQL database systems
+
+Adaptive testing based on application responses
+
+Technical Understanding
+Difference between GET and POST parameter testing
+
+Various SQL injection techniques and their detection
+
+Database structure analysis and mapping
+
+Data exfiltration methodologies
+
+Defense evasion capabilities
+
+Practical Application
+Rapid assessment of web application security
+
+Identification of critical data exposure risks
+
+Comprehensive penetration testing workflows
+
+Efficient vulnerability validation
+
+Professional reporting preparation
+
+🛡️ Defense Insights
+Importance of input validation and sanitization
+
+Implementing prepared statements
+
+Web Application Firewall (WAF) configuration
+
+Database permission hardening
+
+Regular security assessment requirements
+
