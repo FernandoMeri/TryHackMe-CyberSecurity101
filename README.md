@@ -1220,4 +1220,58 @@ Completion of the OWASP Top 10 2021 module covering the most critical web applic
 - Defense implementation strategies
 
 ## 📚 Certification
-Module completed as part of TryHackMe's Cyber Security 101 path 
+Module completed as part of TryHackMe's Cyber Security 101 path
+
+## Hydra - Brute Force Tool | TryHackMe Completion
+## Completion Date: [2025/10/03]
+
+## 🎯 Module Overview
+Completion of the Hydra module covering online password brute-forcing techniques and tools.
+
+## 🔧 Skills Acquired
+
+### Command Line Proficiency
+- **SSH Brute Forcing:**
+  ```bash
+  hydra -l username -P wordlist.txt target_ip ssh -t 4
+Web Form Attacks:
+
+bash
+hydra -l admin -P passwords.txt target_ip http-post-form "/login:username=^USER^&password=^PASS^:F=invalid" -V
+FTP Protocol Attacks
+
+Parameter Optimization (-t threads, -V verbose, -f stop on first found)
+
+Protocol Understanding
+SSH, FTP, HTTP/HTTPS form-based authentication
+
+RDP, Telnet, and various network service protocols
+
+Web application login mechanisms (POST forms)
+
+Attack Strategy
+Wordlist selection and management
+
+Thread optimization for performance
+
+Response analysis for success detection
+
+Rate limiting awareness and evasion techniques
+
+🛡️ Defense Insights
+Importance of strong password policies
+
+Account lockout mechanisms
+
+Multi-factor authentication implementation
+
+Log monitoring for brute force detection
+
+📚 Practical Applications
+Penetration testing engagements
+
+Security assessment of authentication systems
+
+Educational understanding of brute force vulnerabilities
+
+Part of TryHackMe's Cyber Security 101 Path 
