@@ -1514,3 +1514,56 @@ Database permission hardening
 
 Regular security assessment requirements
 
+# SOC Fundamentals - Seguridad Defensiva | TryHackMe Completion
+## Completion Date: [2025/10/04]
+## 🎯 Module Overview
+Completion of the SOC Fundamentals module covering security operations center principles, roles, processes, and technologies.
+
+## 🔧 Knowledge Acquired
+
+### SOC Three Pillars Framework
+- **👥 People**: Hierarchical roles and responsibilities
+- **🔄 Processes**: Alert triage, incident response, reporting
+- **🛠️ Technology**: Security tools integration and automation
+
+### SOC Roles Structure
+**Tier 1 Analysts**: First responders, basic triage
+**Tier 2 Analysts**: Deep investigation, correlation analysis  
+**Tier 3 Analysts**: Threat hunting, critical incident response
+**Security Engineers**: Tool implementation and configuration
+**Detection Engineers**: Security rule creation and tuning
+**SOC Manager**: Process management and executive communication
+
+### Alert Triage Methodology
+**5 W Framework**:
+- **What**: Type of security event
+- **When**: Timestamp of occurrence
+- **Where**: Location/asset affected
+- **Who**: User/system involved
+- **Why**: Root cause analysis
+
+### Key Security Technologies
+- **SIEM (Security Information & Event Management)**: Centralized log analysis and correlation
+- **EDR (Endpoint Detection & Response)**: Real-time endpoint monitoring and response
+- **Firewalls**: Network traffic filtering and threat blocking
+- **Additional Tools**: AV, EPP, IDS/IPS, SOAR, XDR
+
+## 🎯 Practical Applications
+
+### Operational Understanding
+- End-to-end threat detection and response workflows
+- Alert prioritization and escalation procedures
+- Incident reporting and documentation standards
+- Security tool integration strategies
+
+### Professional Development
+- Career path understanding in security operations
+- Cross-functional team collaboration
+- Metrics and KPIs for security monitoring
+- Continuous improvement in security posture
+
+## 🛡️ Defense Insights
+- Importance of layered security controls
+- Balance between automation and human analysis
+- Proactive vs reactive security approaches
+- Resource allocation in security operations
