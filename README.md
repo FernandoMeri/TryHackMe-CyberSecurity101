@@ -1841,4 +1841,51 @@ Threat detection and prevention
 
 Vulnerability assessment procedures
 
+# Firewall Fundamentals - TryHackMe
+## Completion Date: [2025/10/04]
+
+🔧 Technical Skills Acquired:
+
+Firewall Types & Architectures
+
+Stateless vs Stateful firewall operation and differences
+
+Application-level gateway (Proxy firewall) implementation
+
+Deep packet inspection capabilities analysis
+
+Rule-Based Filtering Systems
+
+Policy design: default-deny vs default-allow strategies
+
+Rule optimization and order of execution management
+
+Source/Destination/Protocol based filtering methodologies
+
+Security Policy Implementation
+
+Principle of least privilege in network access
+
+Service-specific rule creation (HTTP, SSH, DNS, etc.)
+
+Threat-based rule configuration and management
+
+Technical Evaluation Criteria
+
+Performance impact assessment of different firewall types
+
+Security effectiveness metrics for firewall solutions
+
+Deployment scenario analysis for optimal protection
+
+🛠️ Technical Competencies:
+
+Network perimeter security design
+
+Firewall policy development and management
+
+Traffic filtering rule optimization
+
+Security architecture evaluation
+
 
