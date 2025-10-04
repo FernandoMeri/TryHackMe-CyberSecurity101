@@ -1567,3 +1567,68 @@ Completion of the SOC Fundamentals module covering security operations center pr
 - Balance between automation and human analysis
 - Proactive vs reactive security approaches
 - Resource allocation in security operations
+
+# Digital Forensic Fundamentals | TryHackMe Completion
+## Completion Date: [2025/10/04]
+## 🎯 Module Overview
+Completion of the Digital Forensics Fundamentals module covering cyber crime investigation techniques, evidence handling, and forensic analysis methodologies.
+
+## 🔧 Knowledge Acquired
+
+### Forensic Methodology (NIST Framework)
+- **Collection**: Evidence acquisition and preservation
+- **Examination**: Data filtering and relevant evidence extraction  
+- **Analysis**: Correlation and timeline reconstruction
+- **Reporting**: Legal documentation and executive summaries
+
+### Evidence Acquisition Protocols
+- **Legal Authorization**: Proper warrants and permissions
+- **Chain of Custody**: Documentation for evidence integrity
+- **Write Blockers**: Hardware/software for evidence preservation
+- **Forensic Imaging**: Bit-by-bit copies of storage media
+
+### Windows Forensic Analysis
+- **Disk Imaging**: Complete storage device copies using FTK Imager
+- **Memory Imaging**: RAM capture for volatile data using DumpIt
+- **Artifact Analysis**: File systems, registry, logs, user activity
+- **Tool Proficiency**: FTK Imager, Autopsy, Volatility Framework
+
+### Metadata Analysis
+- **EXIF Data**: Image metadata extraction with ExifTool
+- **PDF Metadata**: Document provenance with pdfinfo
+- **GPS Coordinates**: Geolocation from digital photos
+- **Timeline Analysis**: Creation/modification dates
+
+## 🛠️ Tools Mastered
+
+### Acquisition Tools
+- **FTK Imager**: Disk imaging and preliminary analysis
+- **DumpIt**: Memory capture from live systems
+- **Write Blockers**: Evidence preservation devices
+
+### Analysis Tools
+- **Autopsy**: Comprehensive digital forensics platform
+- **Volatility**: Advanced memory forensics framework
+- **ExifTool**: Metadata extraction from multiple file formats
+- **pdfinfo**: PDF metadata analysis
+
+## 🎯 Practical Applications
+
+### Investigative Techniques
+- Incident response and post-breach analysis
+- Criminal investigation support
+- Corporate policy violation investigations
+- Intellectual property theft cases
+
+### Legal Compliance
+- Evidence handling for court proceedings
+- Chain of custody documentation
+- Expert witness preparation
+- Regulatory compliance investigations
+
+## 🔍 Forensic Specializations
+- **Computer Forensics**: Workstation and server analysis
+- **Mobile Forensics**: Smartphone and tablet investigation
+- **Network Forensics**: Traffic analysis and log correlation
+- **Cloud Forensics**: Infrastructure-as-a-Service investigation
+- **Database Forensics**: Data manipulation and access analysis
