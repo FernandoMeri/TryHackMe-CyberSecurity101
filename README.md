@@ -1946,3 +1946,63 @@ Intrusion detection system deployment
 Vulnerability assessment procedures
 
 Security tool configuration and optimization
+
+# Vulnerability Scanner Overview
+## Completion Date: [2025/10/04]
+
+🔧  Technical Skills Acquired:
+SIEM Systems Architecture
+
+Centralized security event management and log aggregation
+
+Multi-source log correlation for early threat detection
+
+Real-time alerting configuration and forensic analysis
+
+Firewall Technologies & Deployment
+
+Stateless vs Stateful vs Application-level firewall operational differences
+
+Rule-based filtering policy development and optimization
+
+Default-deny strategy implementation and traffic flow management
+
+Intrusion Detection/Prevention Systems
+
+IDS (monitoring/alerting) vs IPS (active blocking) architectural differences
+
+Signature-based and anomaly-based detection methodologies
+
+Network-based (NIDS) and Host-based (HIDS) deployment scenarios
+
+Snort IDS Implementation & Management
+
+Custom rule syntax creation and testing procedures
+
+Real-time network traffic analysis configuration
+
+PCAP file forensic analysis and historical investigation
+
+Alert management, log review, and reporting procedures
+
+Vulnerability Assessment Framework
+
+Systematic vulnerability scanning methodologies and tool selection
+
+Security weakness identification across network infrastructure
+
+Scanning process: planning, execution, analysis, and remediation
+
+Compliance and continuous improvement frameworks
+
+🛠️ Technical Competencies:
+
+Security information and event management implementation
+
+Network perimeter defense strategy development
+
+Intrusion detection system deployment and configuration
+
+Vulnerability assessment and management procedures
+
+Security tool optimization and operational integration
