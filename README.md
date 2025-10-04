@@ -1793,3 +1793,52 @@ Enterprise security operations understanding
 Regulatory compliance and legal considerations
 
 Cross-functional team collaboration skills
+
+#Introduction to SIEM
+## Completion Date: [2025/10/04]
+
+📚 Technical Content Mastered:
+
+SIEM Implementation
+
+Centralized log collection and event correlation
+
+Real-time security monitoring and alerting
+
+Forensic analysis capabilities
+
+Firewall Architecture
+
+Network traffic filtering based on predefined rules
+
+Inbound/outbound traffic control methodologies
+
+Policy implementation and management
+
+IDS/IPS Systems
+
+Intrusion Detection Systems (passive monitoring)
+
+Intrusion Prevention Systems (active blocking)
+
+Signature-based and anomaly-based detection
+
+Vulnerability Assessment
+
+Systematic vulnerability scanning methodologies
+
+Identification of security weaknesses in systems
+
+Reporting and prioritization of discovered vulnerabilities
+
+🛠️ Competencias Técnicas:
+
+Security event management
+
+Network perimeter defense
+
+Threat detection and prevention
+
+Vulnerability assessment procedures
+
+
