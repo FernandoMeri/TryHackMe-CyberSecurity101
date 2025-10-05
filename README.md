@@ -2006,3 +2006,53 @@ Intrusion detection system deployment and configuration
 Vulnerability assessment and management procedures
 
 Security tool optimization and operational integration
+
+#CyberChef Basics 
+## Completion Date: [2025/10/05]
+
+🔧 Technical Skills Acquired:
+
+Data Transformation Operations
+
+Base64, Hex, URL encoding/decoding methodologies
+
+Basic cryptographic operations (XOR, ROT13, Vigenère cipher)
+
+Data format conversion and normalization techniques
+
+Workflow Automation
+
+Recipe creation and management for repetitive tasks
+
+Operation chaining for complex data processing pipelines
+
+Input/Output handling for various data formats and sources
+
+Security Analysis Applications
+
+Malware payload decoding and configuration extraction
+
+IOC (Indicators of Compromise) pattern matching and extraction
+
+Forensic metadata processing and timestamp conversion
+
+Network traffic and log data manipulation
+
+Tool Integration Understanding
+
+Interface navigation and operational parameter configuration
+
+Large-scale processing limitations and alternative tool requirements
+
+Cross-tool compatibility for advanced analysis workflows
+
+🛠️ Technical Competencies:
+
+Data manipulation and transformation techniques
+
+Security artifact analysis and processing
+
+Automated workflow development for repetitive tasks
+
+Cross-format data conversion and normalization
+
