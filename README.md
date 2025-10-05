@@ -2056,3 +2056,48 @@ Automated workflow development for repetitive tasks
 
 Cross-format data conversion and normalization
 
+# CAPA Basics 
+## Completion Date: [2025/10/05]
+🔧 Technical Skills Acquired:
+
+Static Analysis Methodology
+
+Capability-based analysis vs traditional signature detection
+
+Safe executable examination without execution risk
+
+Rapid triage and assessment workflows
+
+CAPA Tool Operation
+
+Command-line interface and parameter usage
+
+Output interpretation: capabilities and meta-capabilities
+
+JSON format for automated processing and integration
+
+Malware Capability Detection
+
+Network operations (internet connectivity, DNS, HTTP)
+
+System manipulation (file system, registry, processes)
+
+Anti-analysis techniques (VM detection, debugging evasion)
+
+Analysis Integration
+
+Complementary role to dynamic analysis tools
+
+Quick assessment prioritization for incident response
+
+Pattern recognition for threat hunting activities
+
+🛠️ Technical Competencies:
+
+Static malware analysis techniques
+
+Capability-based threat assessment
+
+Command-line tool operation and output parsing
+
+Security tool integration strategies
