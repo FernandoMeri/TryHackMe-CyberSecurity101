@@ -2150,3 +2150,58 @@ Integrated security tool workflows
 Rapid incident response preparation
 
 Malware and forensic analysis foundations
+
+#Security Defense Tools - TryHackMe
+## Completion Date: [2025/10/05]
+
+🔧 Technical Skills Acquired:
+
+CyberChef Data Manipulation
+
+Encoding/decoding operations (Base64, Hex, URL)
+
+Cryptographic transformations (XOR, ROT13, Vigenère)
+
+Data parsing and pattern extraction (regex, IOC identification)
+
+Recipe creation and workflow automation
+
+CAPA Static Analysis
+
+Capability-based malware assessment methodology
+
+Executable analysis without execution risk
+
+Network, system, and anti-analysis capability detection
+
+Integration with incident response workflows
+
+REMNux Forensic Environment
+
+Specialized Linux distribution navigation and tool utilization
+
+Static malware analysis toolchain (pefile, yara, strings)
+
+Document analysis utilities (pdf-parser, oletools, xorsearch)
+
+Memory forensics framework (Volatility) operation
+
+FlareVM Reverse Engineering
+
+Windows-based malware analysis environment configuration
+
+Debugging tools operation (x64dbg, OllyDbg, WinDbg)
+
+Decompilation and static analysis (Ghidra, IDA Pro, dnSpy)
+
+Dynamic analysis instrumentation (Process Monitor, Wireshark)
+
+🛠️ Technical Competencies:
+
+Multi-platform security tool proficiency
+
+Integrated defensive analysis workflows
+
+Malware analysis and reverse engineering foundations
+
+Incident response toolchain configuration
