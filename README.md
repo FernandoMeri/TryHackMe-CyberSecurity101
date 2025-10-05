@@ -2101,3 +2101,52 @@ Capability-based threat assessment
 Command-line tool operation and output parsing
 
 Security tool integration strategies
+
+#REMNux Getting Started 
+## Completion Date: [2025/10/05]
+
+🔧 Technical Skills Acquired:
+
+REMNux Environment Setup
+
+Specialized Linux distribution for malware analysis and forensics
+
+Pre-configured tool organization and categorization
+
+Environment navigation and tool accessibility optimization
+
+Analysis Tool Categories
+
+Static malware analysis utilities (pefile, yara, strings)
+
+Document analysis tools (pdf-parser, oletools, xorsearch)
+
+Memory forensics framework (Volatility integration)
+
+Network and system analysis tools
+
+Operational Workflows
+
+Rapid incident response environment preparation
+
+Integrated analysis workflows for efficient threat investigation
+
+Tool chain configuration for comprehensive artifact examination
+
+Practical Application Scenarios
+
+Ready-to-use analysis environment for suspicious artifacts
+
+Time-optimized security investigation procedures
+
+Foundation for advanced digital forensics techniques
+
+🛠️ Technical Competencies:
+
+Specialized analysis environment configuration
+
+Integrated security tool workflows
+
+Rapid incident response preparation
+
+Malware and forensic analysis foundations
